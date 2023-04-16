@@ -1,19 +1,19 @@
 android {
+    // ... other options
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
 }
 
-repositories {
-    maven {
-        url "https://artifactory.appodeal.com/appodeal"
-    }
-}
-
 dependencies {
-	// Appodeal SDK
-	implementation ('com.appodeal.ads:sdk:2.6.4.+') {
-        exclude group: 'com.appodeal.ads.sdk.networks', module: 'vungle'
+    // ... other project dependencies
+    implementation ('com.appodeal.ads:sdk:3.0.2.+') {
+        exclude group: 'com.appodeal.ads.sdk.services', module: 'adjust'
+        exclude group: 'com.appodeal.ads.sdk.networks', module: 'appodeal'
+        exclude group: 'com.appodeal.ads.sdk.services', module: 'appsflyer'
+        exclude group: 'com.appodeal.ads.sdk.services', module: 'firebase'
+        exclude group: 'com.appodeal.ads.sdk.services', module: 'facebook_analytics'
+        exclude group: 'com.appodeal.ads.sdk.networks', module: 'nast'
     }
 }
