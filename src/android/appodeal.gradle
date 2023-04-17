@@ -8,7 +8,7 @@ android {
 
 dependencies {
     // ... other project dependencies
-    implementation ('com.appodeal.ads:sdk:3.0.2.+') {
+    implementation ('com.appodeal.ads:sdk:3.0.1.1.+') {
         exclude group: 'com.appodeal.ads.sdk.services', module: 'adjust'
         exclude group: 'com.appodeal.ads.sdk.networks', module: 'appodeal'
         exclude group: 'com.appodeal.ads.sdk.services', module: 'appsflyer'
